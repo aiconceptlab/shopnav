@@ -1,0 +1,3 @@
+import {authorized,sameOrigin} from '../../../../../../lib/auth.ts';import {draft,saveDraft} from '../../../../../../lib/repository.ts';import {body,fail,fresh} from '../../../../../../lib/http.ts';
+export const runtime='nodejs';export async function GET(req:Request,{params}:{params:Promise<{slug:string}>}){try{authorized(req);return Response.json(await draft((await params).slug),{headers:fresh});}catch(e){return fail(e);}}
+export async function PUT(req:Request,{params}:{params:Promise<{slug:string}>}){try{authorized(req);sameOrigin(req);return Response.json(await saveDraft((await params).slug,await body(req)),{headers:fresh});}catch(e){return fail(e);}}

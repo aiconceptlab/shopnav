@@ -1,0 +1,2 @@
+import {authorized,sameOrigin} from '../../../../../../lib/auth.ts';import {publishDraft} from '../../../../../../lib/repository.ts';import {body,fail,fresh} from '../../../../../../lib/http.ts';import {z} from 'zod';
+export async function POST(req:Request,{params}:{params:Promise<{slug:string}>}){try{authorized(req);sameOrigin(req);const b=z.object({revision:z.number().int().positive()}).parse(await body(req));return Response.json(await publishDraft((await params).slug,b.revision),{headers:fresh});}catch(e){return fail(e);}}

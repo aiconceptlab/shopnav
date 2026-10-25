@@ -1,0 +1,17 @@
+I turned a store map into a shopping guide. 🛠️
+
+Meet ShopNav.
+
+Search “M8 bolts”. See the shelf. Follow a walkable route.
+Add a paint brush and wall plugs, then plan a route through the shelf stops and finish at checkout.
+
+For the store owner: edit shelves, paths and product locations in a draft, check it, then publish. Customers keep seeing the last published map while you work.
+
+The free POC includes a hardware store with 36 products, 12 shelves and QR checkpoints. No paid API keys.
+
+The useful part is the workflow. Routing is deterministic, not AI, and the start point is manually confirmed — no indoor GPS or live customer tracking. Stock is manually maintained too.
+
+Comment “CODE” to get the free source + setup guide. ↓
+
+AI Concept Lab — Testing practical ideas to find what's worth building.
+#AIConceptLab #RetailTech #BuildInPublic #OpenSource #Nextjs #ProductDevelopment #HardwareStore

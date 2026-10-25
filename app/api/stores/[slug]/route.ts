@@ -1,0 +1,1 @@
+import {published} from '../../../../lib/repository.ts';import {fail,fresh} from '../../../../lib/http.ts';export async function GET(req:Request,{params}:{params:Promise<{slug:string}>}){try{return Response.json(await published((await params).slug),{headers:fresh});}catch(e){return fail(e);}}
